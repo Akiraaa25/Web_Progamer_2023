@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumlah Dua Bilangan</title>
+</head>
+<body>
+    <h2>Jumlah Dua Bilangan</h2>
+    <input type="text" id="input1" onchange="updateOutput()">
+    <h3>+</h3>
+    <input type="text" id="input2" onChange="updateOutput()">
+    <h3>=</h3>
+    <p id="output"></p>
+
+    <script>
+        function updateOutput() {
+            var input1 = parseInt(document.getElementById('input1').value) || 0;
+            var input2 = parseInt(document.getElementById('input2').value) || 0;
+            var output = document.getElementById('output');
+
+            output.innerHTML = isNaN(input1) || isNaN(input2) ? "Masukkan angka yang valid" : input1 + input2;
+        }
+    </script>
+</body>
+</html>

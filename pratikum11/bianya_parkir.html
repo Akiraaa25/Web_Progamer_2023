@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>biaya parkir</title>
+</head>
+<body>
+    <h2>jumalah biaya parkir</h2>
+
+    <label for="masuk">Jam Masuk:</label><br>
+    <input type="number" id="masuk" name="masuk"><br>
+
+    <label for="keluar">Jam Keluar:</label><br>
+    <input type="number" id="keluar" name="keluar"><br>
+
+    <button onclick="jumlah()">jumlah</button>
+
+    <p id="biayaparkir"></p>
+
+    <script>
+        function jumlah() {
+            const masuk = parseInt(document.getElementById('masuk').value, 10);
+            const keluar = parseInt(document.getElementById('keluar').value, 10);
+
+            const Biayadasar = 3000;
+            const Biayatambahan = 1000;
+
+            const lamaparkir = keluar - masuk;
+
+            let biayaparkir = Biayadasar;
+
+            if (lamaparkir > 2) {
+                const JamTambahan = lamaparkir - 2;
+                biayaparkir += JamTambahan * Biayatambahan;
+            }
+
+            document.getElementById('biayaparkir').innerText = `Parking Cost: ${biayaparkir}`;
+        }
+    </script>
+</body>
+</html>

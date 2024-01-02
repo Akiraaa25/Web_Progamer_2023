@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Picker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(to right, #B1AFFF, #93C6E7);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+<ul class="nav nav-tabs justify-content-center m-5">
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="login.html" data-bs-toggle="tab">Login</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="kurs_rupiah.html" data-bs-toggle="tab">Kurs Rupiah</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="Chat_Message.html" data-bs-toggle="tab">Chat Message</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="Image_Picker.html" data-bs-toggle="tab">Image Picker</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="Form_Validation.html" data-bs-toggle="tab">Form Validation</a>
+    </li>
+</ul>
+
+
+<div class="container mt-5">
+        <h2 class="text-center mb-4">Pilih Gambar</h2>
+        <select id="dropdown" class="form-select">
+            <option value="">Pilih Gambar</option>
+            <option value="https://i.pinimg.com/564x/6b/ee/1c/6bee1cfda3e1a6c6a0a02b89968459c8.jpg">Gambar 1</option>
+            <option value="https://i.pinimg.com/564x/5e/54/54/5e5454fb45337d754aa77c5d3807b3e1.jpg">Gambar 2</option>
+            <option value="https://i.pinimg.com/474x/76/fc/c2/76fcc2d5d3ca8affb08ba244371c8af5.jpg">Gambar 3</option>
+            <option value="https://i.pinimg.com/564x/af/4c/94/af4c941c3eb7327fee466d31cf9a67cf.jpg">Gambar 4</option>
+            <option value="https://i.pinimg.com/736x/ec/c1/08/ecc10820904ba907d86d1e0f39402075.jpg">Gambar 5</option>
+            <option value="https://i.pinimg.com/564x/95/e9/df/95e9dfce0cfa700431b34925739c19b6.jpg">Gambar 6</option>
+          </select>
+          
+        <br>
+        <div id="gambar" class="text-center mt-4"></div>
+      </div>
+      
+      <script>
+       $("#dropdown").change(function(){
+        var image = $(this).val();
+        if (image === "") { 
+            return;
+        } 
+        else {
+            alert("Apakah Anda Yakin Ingin Memilih Gambar Ini?");
+            alert("Yakin Memilih Gambar Ini?");
+            alert("Yaudah Kalo Anda Yakin!");
+            $("#gambar").html("<img src='" + image + "' alt='Gambar' class='img-fluid rounded' />");
+        }
+        });
+
+
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></script>
+</body>
+</html>

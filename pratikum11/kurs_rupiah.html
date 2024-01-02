@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+</head>
+
+<body>
+    <h1>Konversi Mata Uang</h1>
+    <p>Masukkan jumlah dollar:</p>
+    <input type="text" id="dollar" name="dollar">
+    <button onclick="convert()">Konversi</button>
+    <p id="result"></p>
+
+    <script>
+        function rupiahkeDollar(rupiah) {
+            return rupiah / 14.650;
+        }
+
+        function dollarkeRupiah(dollar) {
+            return dollar * 14.650;
+        }
+
+        function convert() {
+            var jumlahdolar = parseFloat(document.getElementById("dollar").value);
+            var jumlahrupiah = dollarkeRupiah(jumlahdolar);
+            var memeriksaJumlah = rupiahkeDollar(jumlahrupiah); 
+            document.getElementById("result").innerHTML = "Dollar asal: " + jumlahdolar + "<br>" +
+                                                           "Rupiah setelah konversi: " + jumlahrupiah + "<br>" +
+                                                           "Dollar setelah konversi ulang: " + memeriksaJumlah;
+        }
+    </script>
+</body>
+</html>

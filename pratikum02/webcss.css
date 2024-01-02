@@ -1,0 +1,25 @@
+nav {
+    background-color: black;
+    color: white;
+}
+.karyawan {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+a {
+    text-decoration: none;
+    color: mediumvioletred;
+}
+form{
+   width: 40%;
+   margin: auto;
+}
+th {
+    text-align: right;
+}
+th, td {
+    padding: 5px;
+}

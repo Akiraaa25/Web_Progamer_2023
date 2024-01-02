@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Javasrcipt</title>
+    <style>
+         body {
+          background: linear-gradient(to right, #8ACDD7, #F9F9E0); 
+          margin: 0; 
+          padding: 0; 
+        }
+    </style>
+</head>
+<body>
+    <h2>Kalkulator Sederhana</h2>
+    <label for="value1">Bilangan 1</label>
+    <input type="number" id="value1">
+    <br> <br>
+    <label for="value2">Bilangan 2</label>
+    <input type="number" id="value2">
+    <br> <br>
+    <label for="operator"> pilih operator</label>
+    <select name="" id="operator">
+        <option value="">pilih operator</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+    </select>
+    <br> <br>
+    <button onclick="Hitung()">Hitung</button>
+    <br> <br> <hr style="border-width: 5px;">
+    <h1 style="margin-left: 50px;" id="hasil">0</h1>
+
+    <script>
+        function Hitung(){
+            let Bilangan1 = parseInt (document.getElementById('value1').value);
+            let Bilangan2 = parseInt (document.getElementById('value2').value);
+            let operator = document.getElementById('operator').value;
+
+            // pengecekan get elemen //
+            console.log(Bilangan1);
+            console.log(Bilangan2);
+            console.log(operator);
+
+            let total = 0;
+            if (operator == '+'){
+                total = Bilangan1 + Bilangan2;
+            }
+            else if ( operator == '-'){
+                total = Bilangan1 - Bilangan2;
+            }
+            else if ( operator == '/'){
+                total = Bilangan1 / Bilangan2;
+            }
+            else if ( operator == '*'){
+                total = Bilangan1 * Bilangan2;
+            }
+
+            let hasil = document.getElementById('hasil');
+            hasil.innerHTML = total;
+        }
+    </script>
+</body>
+</html>

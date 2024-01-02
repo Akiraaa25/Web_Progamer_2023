@@ -1,0 +1,27 @@
+body {
+    background: linear-gradient(to right, #0040ff, #00fff2); 
+    margin: 0; 
+    padding: 0; 
+  }
+img {
+    width: 10%;
+}
+nav {
+    display: flex;
+    background-color: aqua;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+nav li.about {
+    margin-left: 225px;
+}
+nav li {
+    padding-left: 1em;
+}
+a {
+    text-decoration: none;
+    color: black;
+}

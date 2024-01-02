@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chat Message</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+    body {
+    background: linear-gradient(to right, #F9F9E0, #8ACDD7);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;  
+    }
+
+    #chatbox {
+    position: fixed;
+    bottom: 150px;
+    right: 400px;
+    width: 500px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    }
+
+    #pesanBaru {
+    width: 300px;
+    margin-left: 20px;
+    }
+
+    #pesan {
+     font-size: 20px;
+    background-color: white;
+    overflow-y: auto;  
+    height: 300px;
+    border-radius: 20px;     
+    }
+
+    #kirim {
+    padding: 6px 10px;
+    margin-left: 60px;
+    background-color: #8EACCD;
+    color: white;
+    border: none;  
+    }
+
+  </style>
+</head>
+<body>
+
+<ul class="nav nav-tabs justify-content-center m-5">
+    <li class="nav-item">
+        <a class="nav-link " aria-current="page" href="login.html" data-bs-toggle="tab">Login</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="kurs_rupiah.html" data-bs-toggle="tab">Kurs Rupiah</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="Chat_Message.html" data-bs-toggle="tab">Chat Message</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="Image_Picker.html" data-bs-toggle="tab">Image Picker</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="Form_Validation.html" data-bs-toggle="tab">Form Validation</a>
+    </li>
+</ul>
+
+
+<div id="chatbox" >
+    <div id="pesan">
+    </div>
+    <input type="text" id="pesanBaru">
+    <button type="button" id="kirim">Kirim</button>
+    </div>
+  
+  <script>
+    document.getElementById("kirim").addEventListener("click", function() {
+    var pesan = document.getElementById("pesanBaru").value;
+    document.getElementById("pesan").innerHTML += pesan + "<br>";
+    document.getElementById("pesanBaru").value = "";
+    });
+
+    document.getElementById("pesanBaru").addEventListener("keydown", function(event) {
+     if (event.key === "Enter") {
+    document.getElementById("kirim").click(); 
+    }
+    });
+
+
+
+  </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></script>
+</body>
+</html>
